@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('subject', 50)->comment('course subject');
             $table->string('course_code', 10)->comment('course code');
             $table->integer('credits')->comment('credits specified');
-            $table->string('desciprtion')->comment('course description');
+            $table->string('description')->comment('course description');
         });
     }
 

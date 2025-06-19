@@ -20,7 +20,7 @@ class CourseFactory extends Factory
             'subject' => fake()->word(),
             'course_code' => fake()->randomElement(['CC1', 'CC2', 'CC3', 'CC4', 'CC5', 'CC6', 'CC7', 'CC8', 'CC9', 'CC10']),
             'credits' => fake()->numberBetween(12, 15),
-            'desciprtion' => fake()->paragraph(),
+            'description' => fake()->text(255),
         ];
     }
 }
