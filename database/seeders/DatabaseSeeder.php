@@ -6,6 +6,7 @@ use App\Models\Schedule;
 use App\Models\Student;
 use App\Models\Teacher;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Relationship;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,7 +22,9 @@ class DatabaseSeeder extends Seeder
             StudentSeeder::class,
             TeacherSeeder::class,
             CourseSeeder::class,
+            ScheduleSeeder::class,
             RoleSeeder::class,
+            RelationshipSeeder::class,
         ]);
     }
 }

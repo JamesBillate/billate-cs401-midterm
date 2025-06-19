@@ -17,8 +17,9 @@ class CourseSeeder extends Seeder
     {
         $teachers = Teacher::all();
 
-        Course::factory(20)->create([
-            'teacher_id' => $teachers->random()->id,
-        ]);
+        Course::factory(20)->make()->each(function ($course) use ($teachers) {
+            $course->teacher_id = $teachers->random()->id;
+            $course->save();
+        });
     }
 }

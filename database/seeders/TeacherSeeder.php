@@ -16,7 +16,6 @@ class TeacherSeeder extends Seeder
     public function run(): void
     {
         $users = User::all();
-        $courses = Course::all();
 
         $users = $users->random(min(25, $users->count()));
 

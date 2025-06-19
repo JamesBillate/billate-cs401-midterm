@@ -14,6 +14,11 @@ class ScheduleSeeder extends Seeder
      */
     public function run(): void
     {
-        Schedule::factory()->count(30)->create();
+        $courses = Course::all();
+
+        Schedule::factory(50)->make()->each(function ($schedule) use ($courses) {
+            $schedule->course_id = $courses->random()->id;
+            $schedule->save();
+        });
     }
 }
